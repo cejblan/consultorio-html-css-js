@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sonrisa Clínica Odontológica — Inicio</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER (minimal, fijo arriba) -->
+    <header class="site-header" role="banner">
+        <div class="header-inner container">
+            <div class="brand">
+                <img src="assets/Logo.png" alt="Sonrisa Clínica" class="logo">
+                <div class="brand-text">
+                    <strong class="clinic-name">Sonrisa Clínica</strong>
+                    <span class="clinic-tag">Odontología integral · Familiar</span>
+                </div>
+            </div>
+
+            <nav class="header-actions" aria-label="Acciones del sitio">
+                <a href="#servicios" class="link-ghost">Servicios</a>
+                <a href="#equipo" class="link-ghost">Equipo</a>
+                <a href="#contacto" class="link-ghost">Contacto</a>
+                <button id="openModalBtn" class="btn-primary">Agendar Cita</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO (centrado, tarjeta principal) -->
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-card container">
+                <div class="hero-left">
+                    <h1 id="hero-title">Tu sonrisa, nuestra prioridad</h1>
+                    <p class="lead">Tratamientos de odontología general, estética y ortodoncia con tecnología moderna y
+                        trato humano. Reserva tu primera consulta con diagnóstico gratuito.</p>
+
+                    <ul class="hero-features" role="list">
+                        <li>✓ Diagnóstico digital</li>
+                        <li>✓ Planes de financiamiento</li>
+                        <li>✓ Atención familiar</li>
+                    </ul>
+
+                    <div class="hero-actions">
+                        <a href="#servicios" class="btn-ghost">Ver servicios</a>
+                        <button id="openModalBtn" class="btn-outline">Agendar Cita</button>
+                    </div>
+                </div>
+
+                <div class="hero-right" aria-hidden="true">
+                    <div class="illustration">
+                        <!-- imagen representativa del consultorio -->
+                        <img src="assets/pexels-polina-zimmerman-4687346.jpg"
+                            alt="Imagen de https://www.pexels.com/es-es/@polina-zimmerman/" />
+                    </div>
+                    <div class="card-quote">
+                        <p class="quote">"Profesionalismo y calidez desde la primera visita"</p>
+                        <div class="small muted">— Dra. Lucía Pérez, Odontóloga</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS (estructura totalmente distinta: carrusel horizontal en móvil) -->
+        <section id="servicios" class="section container">
+            <h2 class="section-title">Servicios destacados</h2>
+
+            <div class="services-row" role="list">
+                <article class="service" role="listitem">
+                    <div class="service-head">Limpieza & Profilaxis</div>
+                    <p class="service-desc">Higiene profesional con pulido y recomendaciones personalizadas.</p>
+                </article>
+
+                <article class="service" role="listitem">
+                    <div class="service-head">Ortodoncia invisible</div>
+                    <p class="service-desc">Alineadores estéticos con seguimiento digital.</p>
+                </article>
+
+                <article class="service" role="listitem">
+                    <div class="service-head">Implantes</div>
+                    <p class="service-desc">Soluciones fijas y duraderas con guía quirúrgica.</p>
+                </article>
+
+                <article class="service" role="listitem">
+                    <div class="service-head">Estética dental</div>
+                    <p class="service-desc">Carillas, blanqueamiento y diseño de sonrisa.</p>
+                </article>
+            </div>
+
+            <div class="services-more">
+                <a href="#contacto" class="link-ghost">Ver todos los servicios</a>
+            </div>
+        </section>
+
+        <!-- EQUIPO (tarjetas verticales) -->
+        <section id="equipo" class="section alt">
+            <div class="container">
+                <h2 class="section-title">Nuestro equipo</h2>
+                <div class="team-grid">
+                    <figure class="team-card">
+                        <img src="assets/pexels-cedric-fauntleroy-4269363.jpg"
+                            alt="Imagen de https://www.pexels.com/es-es/@cedric-fauntleroy/">
+                        <figcaption>
+                            <strong>Dra. Lucía Pérez</strong>
+                            <div class="muted small">Especialista en estética dental</div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="team-card">
+                        <img src="assets/pexels-cedric-fauntleroy-4269942.jpg"
+                            alt="Imagen de https://www.pexels.com/es-es/@cedric-fauntleroy/">
+                        <figcaption>
+                            <strong>Dr. Carlos Medina</strong>
+                            <div class="muted small">Implantología</div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="team-card">
+                        <img src="assets/pexels-shvetsa-3845951.jpg"
+                            alt="Imagen de https://www.pexels.com/es-es/@shvetsa/">
+                        <figcaption>
+                            <strong>Equipo asistencial</strong>
+                            <div class="muted small">Higiene y atención al paciente</div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS (diferente estructura: citas en columna única) -->
+        <section class="section container">
+            <h2 class="section-title">Testimonios reales</h2>
+            <div class="testimonials">
+                <blockquote class="testimonial">
+                    <p>Excelente trato y atención. Me explicaron todo el plan a seguir y el resultado fue perfecto.</p>
+                    <cite class="muted">— Mariana R.</cite>
+                </blockquote>
+
+                <blockquote class="testimonial">
+                    <p>Recibí un implante y el proceso fue cómodo y sin complicaciones. Muy recomendados.</p>
+                    <cite class="muted">— Felipe G.</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- CONTACTO / FOOTER -->
+        <section id="contacto" class="contact-section">
+            <div class="container contact-grid">
+                <div>
+                    <h3>Visítanos</h3>
+                    <p class="muted">Av. Principal 123, Piso 3 — Caracas</p>
+                    <p class="muted">Tel: <strong>+58 412 987 6543</strong></p>
+                </div>
+
+                <div>
+                    <h3>Horarios</h3>
+                    <p class="muted">Lun - Vie: 08:30 — 18:30</p>
+                    <p class="muted">Sáb: 09:00 — 13:00</p>
+                </div>
+
+                <div>
+                    <h3>Correo</h3>
+                    <p class="muted">contacto@sonrisa.example</p>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                © <span id="year"></span> Sonrisa Clínica — Todos los derechos reservados.
+            </footer>
+        </section>
+    </main>
+
+    <!-- CTA sticky (móvil / escritorio): abre modal de cita -->
+    <div class="sticky-cta" aria-hidden="false">
+        <button id="openModalBtn" class="btn-primary">Agendar Cita</button>
+    </div>
+
+    <!-- Modal cita -->
+    <div id="modal-cita" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-close="true"></div>
+        <div class="modal-panel" role="document">
+            <button class="modal-close" aria-label="Cerrar" data-close="true">&times;</button>
+            <h3 id="modal-title">Agendar cita</h3>
+
+            <form id="form-cita" class="form-grid" onsubmit="return false;">
+                <input type="text" id="name" placeholder="Nombre completo" required>
+                <input type="tel" id="phone" placeholder="Teléfono" required>
+                <input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <select id="service" required>
+                    <option value="">Servicio</option>
+                    <option value="limpieza">Limpieza</option>
+                    <option value="ortodoncia">Ortodoncia</option>
+                    <option value="implantes">Implantes</option>
+                    <option value="estetica">Estética</option>
+                </select>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Enviar solicitud</button>
+                    <button type="button" class="btn-ghost" data-close="true">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

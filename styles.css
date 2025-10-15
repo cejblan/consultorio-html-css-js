@@ -1,0 +1,461 @@
+/* ====== Variables y paleta (clínica: blancos y azules suaves) ====== */
+:root {
+    --bg: #f6fbff;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #1e90ff;
+    /* azul principal */
+    --accent-2: #0b7bd6;
+    --radius: 12px;
+    --container: 1100px;
+    --gap: 18px;
+}
+
+/* ====== Reset ligero ====== */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background: var(--bg);
+    color: #0b1320;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
+
+/* contenedor central */
+.container {
+    max-width: var(--container);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px
+}
+
+/* ====== HEADER ====== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.6));
+    border-bottom: 1px solid rgba(11, 19, 32, 0.04);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+    padding: 12px 0;
+}
+
+/* marca */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    border-radius: 8px
+}
+
+.brand-text .clinic-name {
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700
+}
+
+.clinic-tag {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+/* acciones header */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.link-ghost {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px
+}
+
+.link-ghost:hover {
+    background: rgba(11, 19, 32, 0.03)
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 0;
+    padding: 8px 12px;
+    cursor: pointer
+}
+
+/* ====== HERO ====== */
+.hero {
+    padding: 48px 0
+}
+
+.hero-card {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.98));
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    padding: 28px;
+}
+
+/* texto hero */
+.hero-left h1 {
+    margin: 0 0 12px 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 4vw, 34px);
+    line-height: 1.06;
+    /* sutil sombra en título */
+    text-shadow: 0 1px 6px rgba(14, 30, 50, 0.06);
+}
+
+.lead {
+    margin: 0 0 16px 0;
+    color: var(--muted);
+    max-width: 52ch;
+    font-size: 15px
+}
+
+.hero-features {
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 12px 0 18px 0;
+    list-style: none;
+    color: var(--accent-2);
+    font-weight: 600
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+/* ilustración derecha */
+.hero-right .illustration img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px
+}
+
+.card-quote {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(14, 30, 50, 0.02), rgba(14, 30, 50, 0.01));
+    border: 1px solid rgba(11, 19, 32, 0.03)
+}
+
+.quote {
+    margin: 0;
+    font-weight: 600
+}
+
+/* ====== SECCIONES ====== */
+.section {
+    padding: 40px 0
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 0 0 18px 0;
+    font-weight: 700
+}
+
+/* SERVICES: fila horizontal (scroll en móvil) */
+.services-row {
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+    padding-bottom: 6px;
+}
+
+.service {
+    min-width: 220px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(11, 19, 32, 0.06);
+    border: 1px solid rgba(11, 19, 32, 0.03);
+    flex: 0 0 auto;
+}
+
+.service-head {
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.service-desc {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.services-more {
+    margin-top: 12px
+}
+
+/* TEAM */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px
+}
+
+.team-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(11, 19, 32, 0.06);
+    text-align: center;
+    padding-bottom: 12px
+}
+
+.team-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover
+}
+
+.team-card figcaption {
+    padding: 12px
+}
+
+/* TESTIMONIOS */
+.testimonials {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px
+}
+
+.testimonial {
+    background: linear-gradient(180deg, #fff, #fbfdff);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(11, 19, 32, 0.03)
+}
+
+.testimonial p {
+    margin: 0 0 8px 0;
+    color: var(--muted)
+}
+
+/* CONTACT */
+.contact-section {
+    background: transparent;
+    padding: 36px 0
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 18px 0;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 18px
+}
+
+/* STICKY CTA (abajo derecha en desktop, centrado en móvil) */
+.sticky-cta {
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    z-index: 70
+}
+
+.sticky-btn {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: white;
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(14, 30, 60, 0.12);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    overflow: auto
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    overflow: auto;
+}
+
+/* Respeta el atributo hidden: cuando el elemento tenga [hidden] debe ocultarse */
+.modal[hidden] {
+    display: none !important;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.45)
+}
+
+.modal-panel {
+    position: relative;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 12px 40px rgba(11, 19, 32, 0.18);
+    border: 1px solid rgba(11, 19, 32, 0.04)
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer
+}
+
+.form-grid {
+    display: grid;
+    gap: 10px
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(11, 19, 32, 0.08);
+    outline: none
+}
+
+.form-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 6px
+}
+
+/* pequeño: se vuelve single column y se ajustan tamaños */
+@media (max-width:900px) {
+    .hero-card {
+        grid-template-columns: 1fr;
+        padding: 20px
+    }
+
+    .hero-right {
+        order: -1
+    }
+
+    /* imagen arriba, distinto orden visual */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .header-actions {
+        gap: 8px
+    }
+
+    .sticky-cta {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto
+    }
+
+    .services-row {
+        padding-left: 4px;
+    }
+}
+
+/* móvil muy pequeño: ajuste adicional */
+@media (max-width:420px) {
+    .brand-text .clinic-name {
+        font-size: 14px
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px
+    }
+
+    .hero-left h1 {
+        font-size: 20px
+    }
+
+    .services-row .service {
+        min-width: 180px
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr
+    }
+}
