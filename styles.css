@@ -101,6 +101,7 @@ svg {
     text-decoration: none;
     padding: 8px;
     border-radius: 8px;
+    font-size: 0.9rem;
 }
 
 .link-ghost:hover {
@@ -137,6 +138,7 @@ svg {
 /* HERO */
 .hero {
     padding: 48px 0;
+    text-align: center;
 }
 
 .hero-card {
@@ -160,24 +162,22 @@ svg {
 }
 
 .lead {
-    margin: 0 0 16px 0;
     color: var(--muted);
-    max-width: 52ch;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 .hero-features {
-    display: flex;
+    display: inline-flex;
     gap: 12px;
     padding: 0;
-    margin: 12px 0 18px 0;
     list-style: none;
     color: var(--accent-2);
     font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .hero-actions {
-    display: flex;
+    display: inline-flex;
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -231,8 +231,7 @@ svg {
     gap: 16px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 6px;
-    padding-left: 2px;
+    padding: 1.2rem;
     scroll-snap-type: x mandatory;
 }
 
@@ -303,6 +302,7 @@ svg {
     padding: 16px;
     border-radius: 12px;
     border: 1px solid rgba(11, 19, 32, 0.03);
+    border-left:3px solid rgba(11,123,214,0.12);
 }
 
 .testimonial p {
