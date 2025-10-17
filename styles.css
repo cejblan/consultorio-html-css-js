@@ -302,7 +302,8 @@ svg {
     padding: 16px;
     border-radius: 12px;
     border: 1px solid rgba(11, 19, 32, 0.03);
-    border-left:3px solid rgba(11,123,214,0.12);
+    border-left: 3px solid rgba(11, 123, 214, 0.12);
+    box-shadow: 0 8px 20px rgba(11, 19, 32, 0.06);
 }
 
 .testimonial p {
